@@ -3,9 +3,9 @@
 /**
  * _isupper - uppercase letters
  * @c: char to check
- *
- * Return: Always 0 
+ * Return: Always 0
  */
+
 int _isupper(int c)
 
 {
