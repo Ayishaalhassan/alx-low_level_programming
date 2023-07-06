@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 int actual_sqrt_recursion(int n, int i);
 
@@ -13,7 +14,14 @@ if (n < 0)
 return (-1);
 return (actual_sqrt_recursion(n, 0));
 }
-int actual_sqrt_recursion(int n, int i);
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number to calculate the square root of
+ * @i: iterate number
+ * Return: The square root of 'n' if it is a perfect square, -1 otherwise.
+ */
+int actual_sqrt_recursion(int n, int i)
 {
 if (i * i > n)
 return (-1);
