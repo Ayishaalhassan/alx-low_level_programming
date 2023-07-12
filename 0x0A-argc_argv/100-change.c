@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - prints the maximum number of coins to
- * make change for an amount of money.
- * @argc: the number of argument supplied to the program
- * @argv: an array of pointers to the arguments.
- * Return: if the number of argument is not exactly one - 1.
- * otherwise - 0.
+ * main - prints the minimum number of coins
+ * @argc: number of arguments to the program.
+ * @argv: Array of pointers to the arguments.
+ *
+ * Return: If not exactly one - 1 otherwise - 0.
  */
 int main(int argc, char *argv[])
 {
@@ -17,13 +17,16 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
 	cents = atoi(argv[1]);
-
 	while (cents > 0)
 	{
 		coins++;
 		if ((cents - 25) >= 0)
+		{
+			cents -= 25;
+			continue;
+		}
+		if ((cents - 10) >= 0)
 		{
 			cents -= 10;
 			continue;
@@ -40,7 +43,6 @@ int main(int argc, char *argv[])
 		}
 		cents--;
 	}
-
 	printf("%d\n", coins);
 	return (0);
 }
