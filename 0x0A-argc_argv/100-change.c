@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - prints the maximum number of coins to 
+ * main - prints the maximum number of coins to
  * make change for an amount of money.
  * @argc: the number of argument supplied to the program
  * @argv: an array of pointers to the arguments.
